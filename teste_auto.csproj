@@ -12,9 +12,11 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -60,11 +62,16 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
     </Reference>
@@ -97,6 +104,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Autentificare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +117,15 @@
       <DependentUpon>Autentificare.cs</DependentUpon>
     </Compile>
     <Compile Include="Intrebare.cs" />
+    <Compile Include="IntrebareEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntrebareEditForm.Designer.cs">
+      <DependentUpon>IntrebareEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntrebariForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pagina Principala.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,18 +139,42 @@
       <DependentUpon>Inregistrare.cs</DependentUpon>
     </Compile>
     <Compile Include="Raspuns.cs" />
+    <Compile Include="RezultateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RezultatTest.cs" />
+    <Compile Include="TestelemeleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestelemeleForm.Designer.cs">
+      <DependentUpon>TestelemeleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestService.cs" />
+    <Compile Include="UtilizatoriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UtilizatoriForm.Designer.cs">
+      <DependentUpon>UtilizatoriForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UtilizatorService.cs" />
     <Compile Include="Utilizator.cs" />
     <Compile Include="DatabaseHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Autentificare.resx">
       <DependentUpon>Autentificare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntrebareEditForm.resx">
+      <DependentUpon>IntrebareEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pagina Principala.resx">
       <DependentUpon>Pagina Principala.cs</DependentUpon>
@@ -145,6 +191,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RezultateForm.resx">
+      <DependentUpon>RezultateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestelemeleForm.resx">
+      <DependentUpon>TestelemeleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -160,4 +215,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
 </Project>

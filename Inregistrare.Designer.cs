@@ -2,213 +2,285 @@
 {
     partial class Inregistrare
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.lblTitlu = new System.Windows.Forms.Label();
+            this.lblSubtitlu = new System.Windows.Forms.Label();
+            this.pnlForm = new System.Windows.Forms.Panel();
+            this.lblNume = new System.Windows.Forms.Label();
             this.txtNume = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblPrenume = new System.Windows.Forms.Label();
             this.txtPrenume = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblParola = new System.Windows.Forms.Label();
             this.txtParola = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btnShowPass = new System.Windows.Forms.Button();
+            this.lblConfirma = new System.Windows.Forms.Label();
             this.txtConfirma = new System.Windows.Forms.TextBox();
+            this.btnShowConfirma = new System.Windows.Forms.Button();
             this.btnInregistreaza = new System.Windows.Forms.Button();
             this.btnInapoi = new System.Windows.Forms.Button();
+            this.pnlTop.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // pnlTop
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(200, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cont nou!";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(95)))), ((int)(((byte)(165)))));
+            this.pnlTop.Controls.Add(this.lblTitlu);
+            this.pnlTop.Controls.Add(this.lblSubtitlu);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(420, 100);
+            this.pnlTop.TabIndex = 0;
             // 
-            // label2
+            // lblTitlu
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nume:";
+            this.lblTitlu.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTitlu.ForeColor = System.Drawing.Color.White;
+            this.lblTitlu.Location = new System.Drawing.Point(0, 15);
+            this.lblTitlu.Name = "lblTitlu";
+            this.lblTitlu.Size = new System.Drawing.Size(420, 45);
+            this.lblTitlu.TabIndex = 0;
+            this.lblTitlu.Text = "Cont nou!";
+            this.lblTitlu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblSubtitlu
+            // 
+            this.lblSubtitlu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblSubtitlu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(212)))), ((int)(((byte)(244)))));
+            this.lblSubtitlu.Location = new System.Drawing.Point(0, 62);
+            this.lblSubtitlu.Name = "lblSubtitlu";
+            this.lblSubtitlu.Size = new System.Drawing.Size(420, 25);
+            this.lblSubtitlu.TabIndex = 1;
+            this.lblSubtitlu.Text = "Completează datele pentru a crea un cont";
+            this.lblSubtitlu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlForm
+            // 
+            this.pnlForm.BackColor = System.Drawing.Color.White;
+            this.pnlForm.Controls.Add(this.lblNume);
+            this.pnlForm.Controls.Add(this.txtNume);
+            this.pnlForm.Controls.Add(this.lblPrenume);
+            this.pnlForm.Controls.Add(this.txtPrenume);
+            this.pnlForm.Controls.Add(this.lblEmail);
+            this.pnlForm.Controls.Add(this.txtEmail);
+            this.pnlForm.Controls.Add(this.lblParola);
+            this.pnlForm.Controls.Add(this.txtParola);
+            this.pnlForm.Controls.Add(this.btnShowPass);
+            this.pnlForm.Controls.Add(this.lblConfirma);
+            this.pnlForm.Controls.Add(this.txtConfirma);
+            this.pnlForm.Controls.Add(this.btnShowConfirma);
+            this.pnlForm.Location = new System.Drawing.Point(25, 115);
+            this.pnlForm.Name = "pnlForm";
+            this.pnlForm.Size = new System.Drawing.Size(370, 343);
+            this.pnlForm.TabIndex = 1;
+            // 
+            // lblNume
+            // 
+            this.lblNume.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblNume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(68)))), ((int)(((byte)(124)))));
+            this.lblNume.Location = new System.Drawing.Point(15, 18);
+            this.lblNume.Name = "lblNume";
+            this.lblNume.Size = new System.Drawing.Size(150, 22);
+            this.lblNume.TabIndex = 0;
+            this.lblNume.Text = "Nume:";
             // 
             // txtNume
             // 
-            this.txtNume.Location = new System.Drawing.Point(115, 121);
+            this.txtNume.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNume.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtNume.Location = new System.Drawing.Point(15, 42);
             this.txtNume.Name = "txtNume";
-            this.txtNume.Size = new System.Drawing.Size(100, 22);
-            this.txtNume.TabIndex = 2;
-            this.txtNume.Text = "txtNume";
+            this.txtNume.Size = new System.Drawing.Size(155, 30);
+            this.txtNume.TabIndex = 1;
             // 
-            // label3
+            // lblPrenume
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(313, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Prenume:";
+            this.lblPrenume.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblPrenume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(68)))), ((int)(((byte)(124)))));
+            this.lblPrenume.Location = new System.Drawing.Point(200, 18);
+            this.lblPrenume.Name = "lblPrenume";
+            this.lblPrenume.Size = new System.Drawing.Size(150, 22);
+            this.lblPrenume.TabIndex = 2;
+            this.lblPrenume.Text = "Prenume:";
             // 
             // txtPrenume
             // 
-            this.txtPrenume.Location = new System.Drawing.Point(299, 121);
+            this.txtPrenume.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrenume.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtPrenume.Location = new System.Drawing.Point(200, 42);
             this.txtPrenume.Name = "txtPrenume";
-            this.txtPrenume.Size = new System.Drawing.Size(100, 22);
-            this.txtPrenume.TabIndex = 4;
-            this.txtPrenume.Text = "txtPrenume";
+            this.txtPrenume.Size = new System.Drawing.Size(155, 30);
+            this.txtPrenume.TabIndex = 3;
             // 
-            // label4
+            // lblEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(206, 280);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(10, 16);
-            this.label4.TabIndex = 5;
-            this.label4.Text = " ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(130, 162);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Email:";
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(68)))), ((int)(((byte)(124)))));
+            this.lblEmail.Location = new System.Drawing.Point(15, 88);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(340, 22);
+            this.lblEmail.TabIndex = 4;
+            this.lblEmail.Text = "Email:";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(115, 181);
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtEmail.Location = new System.Drawing.Point(15, 112);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(284, 22);
-            this.txtEmail.TabIndex = 7;
-            this.txtEmail.Text = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(340, 30);
+            this.txtEmail.TabIndex = 5;
             // 
-            // label6
+            // lblParola
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(128, 236);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Parola:";
+            this.lblParola.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblParola.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(68)))), ((int)(((byte)(124)))));
+            this.lblParola.Location = new System.Drawing.Point(15, 158);
+            this.lblParola.Name = "lblParola";
+            this.lblParola.Size = new System.Drawing.Size(340, 22);
+            this.lblParola.TabIndex = 6;
+            this.lblParola.Text = "Parolă:";
             // 
             // txtParola
             // 
-            this.txtParola.Location = new System.Drawing.Point(115, 255);
+            this.txtParola.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtParola.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtParola.Location = new System.Drawing.Point(15, 182);
             this.txtParola.Name = "txtParola";
-            this.txtParola.Size = new System.Drawing.Size(284, 22);
-            this.txtParola.TabIndex = 9;
-            this.txtParola.Text = "txtParola";
+            this.txtParola.PasswordChar = '*';
+            this.txtParola.Size = new System.Drawing.Size(305, 30);
+            this.txtParola.TabIndex = 7;
             // 
-            // label7
+            // btnShowPass
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(111, 296);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(105, 16);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Confirma parola:";
+            this.btnShowPass.BackColor = System.Drawing.Color.White;
+            this.btnShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowPass.FlatAppearance.BorderSize = 0;
+            this.btnShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPass.Location = new System.Drawing.Point(323, 182);
+            this.btnShowPass.Name = "btnShowPass";
+            this.btnShowPass.Size = new System.Drawing.Size(30, 28);
+            this.btnShowPass.TabIndex = 8;
+            this.btnShowPass.Text = "👁";
+            this.btnShowPass.UseVisualStyleBackColor = false;
+            this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
+            // 
+            // lblConfirma
+            // 
+            this.lblConfirma.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblConfirma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(68)))), ((int)(((byte)(124)))));
+            this.lblConfirma.Location = new System.Drawing.Point(15, 228);
+            this.lblConfirma.Name = "lblConfirma";
+            this.lblConfirma.Size = new System.Drawing.Size(340, 22);
+            this.lblConfirma.TabIndex = 9;
+            this.lblConfirma.Text = "Confirmă parola:";
             // 
             // txtConfirma
             // 
-            this.txtConfirma.Location = new System.Drawing.Point(115, 315);
+            this.txtConfirma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtConfirma.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtConfirma.Location = new System.Drawing.Point(15, 252);
             this.txtConfirma.Name = "txtConfirma";
-            this.txtConfirma.Size = new System.Drawing.Size(284, 22);
-            this.txtConfirma.TabIndex = 11;
-            this.txtConfirma.Text = "txtConfirma";
+            this.txtConfirma.PasswordChar = '*';
+            this.txtConfirma.Size = new System.Drawing.Size(305, 30);
+            this.txtConfirma.TabIndex = 10;
+            // 
+            // btnShowConfirma
+            // 
+            this.btnShowConfirma.BackColor = System.Drawing.Color.White;
+            this.btnShowConfirma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowConfirma.FlatAppearance.BorderSize = 0;
+            this.btnShowConfirma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowConfirma.Location = new System.Drawing.Point(323, 252);
+            this.btnShowConfirma.Name = "btnShowConfirma";
+            this.btnShowConfirma.Size = new System.Drawing.Size(30, 28);
+            this.btnShowConfirma.TabIndex = 11;
+            this.btnShowConfirma.Text = "👁";
+            this.btnShowConfirma.UseVisualStyleBackColor = false;
+            this.btnShowConfirma.Click += new System.EventHandler(this.btnShowConfirma_Click);
             // 
             // btnInregistreaza
             // 
-            this.btnInregistreaza.Location = new System.Drawing.Point(181, 365);
+            this.btnInregistreaza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(95)))), ((int)(((byte)(165)))));
+            this.btnInregistreaza.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInregistreaza.FlatAppearance.BorderSize = 0;
+            this.btnInregistreaza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInregistreaza.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnInregistreaza.ForeColor = System.Drawing.Color.White;
+            this.btnInregistreaza.Location = new System.Drawing.Point(25, 496);
             this.btnInregistreaza.Name = "btnInregistreaza";
-            this.btnInregistreaza.Size = new System.Drawing.Size(129, 29);
-            this.btnInregistreaza.TabIndex = 12;
-            this.btnInregistreaza.Text = "Inregistreaza-te";
-            this.btnInregistreaza.UseVisualStyleBackColor = true;
+            this.btnInregistreaza.Size = new System.Drawing.Size(370, 45);
+            this.btnInregistreaza.TabIndex = 2;
+            this.btnInregistreaza.Text = "Înregistrează-te";
+            this.btnInregistreaza.UseVisualStyleBackColor = false;
             this.btnInregistreaza.Click += new System.EventHandler(this.btnInregistreaza_Click);
             // 
             // btnInapoi
             // 
-            this.btnInapoi.Location = new System.Drawing.Point(159, 400);
+            this.btnInapoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(240)))));
+            this.btnInapoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInapoi.FlatAppearance.BorderSize = 0;
+            this.btnInapoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInapoi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnInapoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(95)))), ((int)(((byte)(165)))));
+            this.btnInapoi.Location = new System.Drawing.Point(25, 558);
             this.btnInapoi.Name = "btnInapoi";
-            this.btnInapoi.Size = new System.Drawing.Size(173, 23);
-            this.btnInapoi.TabIndex = 13;
-            this.btnInapoi.Text = "Inapoi la autentificare";
-            this.btnInapoi.UseVisualStyleBackColor = true;
+            this.btnInapoi.Size = new System.Drawing.Size(370, 35);
+            this.btnInapoi.TabIndex = 3;
+            this.btnInapoi.Text = "Înapoi la autentificare";
+            this.btnInapoi.UseVisualStyleBackColor = false;
             this.btnInapoi.Click += new System.EventHandler(this.btnInapoi_Click);
             // 
             // Inregistrare
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 450);
-            this.Controls.Add(this.btnInapoi);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(240)))));
+            this.ClientSize = new System.Drawing.Size(420, 620);
+            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.btnInregistreaza);
-            this.Controls.Add(this.txtConfirma);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtParola);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPrenume);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNume);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnInapoi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Inregistrare";
-            this.Text = "Inregistrare";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Înregistrare";
+            this.pnlTop.ResumeLayout(false);
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlTop;
+        private System.Windows.Forms.Label lblTitlu;
+        private System.Windows.Forms.Label lblSubtitlu;
+        private System.Windows.Forms.Panel pnlForm;
+        private System.Windows.Forms.Label lblNume;
         private System.Windows.Forms.TextBox txtNume;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblPrenume;
         private System.Windows.Forms.TextBox txtPrenume;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblParola;
         private System.Windows.Forms.TextBox txtParola;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnShowPass;
+        private System.Windows.Forms.Label lblConfirma;
         private System.Windows.Forms.TextBox txtConfirma;
+        private System.Windows.Forms.Button btnShowConfirma;
         private System.Windows.Forms.Button btnInregistreaza;
         private System.Windows.Forms.Button btnInapoi;
     }

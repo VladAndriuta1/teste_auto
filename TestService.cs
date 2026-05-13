@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace teste_auto           
+namespace teste_auto
 {
     public class TestService
     {
@@ -12,7 +12,7 @@ namespace teste_auto
             using (var con = DatabaseHelper.GetConnection())
             {
                 con.Open();
-                string query = "SELECT * FROM intrebari ORDER BY RAND() LIMIT 26";
+                string query = "SELECT * FROM intrebari ORDER BY RAND() LIMIT 24";
                 var cmd = new MySqlCommand(query, con);
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -21,7 +21,10 @@ namespace teste_auto
                     {
                         Id = reader.GetInt32("id"),
                         TextIntrebare = reader.GetString("text_intrebare"),
-                        Categorie = reader.GetString("categorie")
+                        Categorie = reader.GetInt32("id_categorie").ToString(),
+                        ImagineUrl = reader.IsDBNull(reader.GetOrdinal("imagine_url"))
+                            ? null
+                            : reader.GetString("imagine_url")
                     });
                 }
                 reader.Close();
@@ -48,19 +51,20 @@ namespace teste_auto
             return intrebari;
         }
 
-        public void SalveazaRezultat(int idUtilizator, int scor, int timpSecunde)
+        public void SalveazaRezultat(int idUtilizator, int scor, int timpSecunde, string tipTest)
         {
             using (var con = DatabaseHelper.GetConnection())
             {
                 con.Open();
                 bool promovat = scor >= 22;
-                string query = "INSERT INTO teste (id_utilizator, scor, timp_secunde, promovat) " +
-                               "VALUES (@id, @scor, @timp, @promovat)";
+                string query = "INSERT INTO teste (id_utilizator, scor, timp_secunde, promovat, tip_test) " +
+                               "VALUES (@id, @scor, @timp, @promovat, @tip)";
                 var cmd = new MySqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@id", idUtilizator);
                 cmd.Parameters.AddWithValue("@scor", scor);
                 cmd.Parameters.AddWithValue("@timp", timpSecunde);
                 cmd.Parameters.AddWithValue("@promovat", promovat ? 1 : 0);
+                cmd.Parameters.AddWithValue("@tip", tipTest);
                 cmd.ExecuteNonQuery();
             }
         }
@@ -83,7 +87,8 @@ namespace teste_auto
                         Scor = reader.GetInt32("scor"),
                         TimpSecunde = reader.GetInt32("timp_secunde"),
                         Promovat = reader.GetBoolean("promovat"),
-                        DataTest = reader.GetDateTime("data_test")
+                        DataTest = reader.GetDateTime("data_test"),
+                        TipTest = reader.GetString("tip_test")
                     });
                 }
             }
@@ -114,4 +119,4 @@ namespace teste_auto
             }
         }
     }
-}   
+}

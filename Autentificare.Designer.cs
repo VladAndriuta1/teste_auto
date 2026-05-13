@@ -2,168 +2,193 @@
 {
     partial class Autentificare
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pnlTop = new System.Windows.Forms.Panel();
+            this.lblTitlu = new System.Windows.Forms.Label();
+            this.lblSubtitlu = new System.Windows.Forms.Label();
+            this.pnlForm = new System.Windows.Forms.Panel();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblParola = new System.Windows.Forms.Label();
             this.txtParola = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnShowPass = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnMergelaInregistrare = new System.Windows.Forms.Button();
+            this.pnlTop.SuspendLayout();
+            this.pnlForm.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // pnlTop
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 126);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Email:";
+            this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(95)))), ((int)(((byte)(165)))));
+            this.pnlTop.Controls.Add(this.lblTitlu);
+            this.pnlTop.Controls.Add(this.lblSubtitlu);
+            this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(420, 130);
+            this.pnlTop.TabIndex = 0;
             // 
-            // label2
+            // lblTitlu
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(293, 117);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 1;
+            this.lblTitlu.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTitlu.ForeColor = System.Drawing.Color.White;
+            this.lblTitlu.Location = new System.Drawing.Point(0, 25);
+            this.lblTitlu.Name = "lblTitlu";
+            this.lblTitlu.Size = new System.Drawing.Size(420, 45);
+            this.lblTitlu.TabIndex = 0;
+            this.lblTitlu.Text = "Bun venit!";
+            this.lblTitlu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lblSubtitlu
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(69, 193);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Parola:";
+            this.lblSubtitlu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblSubtitlu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(212)))), ((int)(((byte)(244)))));
+            this.lblSubtitlu.Location = new System.Drawing.Point(0, 75);
+            this.lblSubtitlu.Name = "lblSubtitlu";
+            this.lblSubtitlu.Size = new System.Drawing.Size(420, 30);
+            this.lblSubtitlu.TabIndex = 1;
+            this.lblSubtitlu.Text = "Autentifică-te pentru a continua";
+            this.lblSubtitlu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlForm
+            // 
+            this.pnlForm.BackColor = System.Drawing.Color.White;
+            this.pnlForm.Controls.Add(this.lblEmail);
+            this.pnlForm.Controls.Add(this.txtEmail);
+            this.pnlForm.Controls.Add(this.lblParola);
+            this.pnlForm.Controls.Add(this.txtParola);
+            this.pnlForm.Controls.Add(this.btnShowPass);
+            this.pnlForm.Location = new System.Drawing.Point(30, 155);
+            this.pnlForm.Name = "pnlForm";
+            this.pnlForm.Size = new System.Drawing.Size(360, 245);
+            this.pnlForm.TabIndex = 1;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(68)))), ((int)(((byte)(124)))));
+            this.lblEmail.Location = new System.Drawing.Point(25, 25);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(310, 22);
+            this.lblEmail.TabIndex = 0;
+            this.lblEmail.Text = "Email:";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(72, 152);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtEmail.Location = new System.Drawing.Point(25, 50);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(244, 20);
-            this.txtEmail.TabIndex = 3;
-            this.txtEmail.Text = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(280, 32);
+            this.txtEmail.TabIndex = 1;
+            // 
+            // lblParola
+            // 
+            this.lblParola.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblParola.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(68)))), ((int)(((byte)(124)))));
+            this.lblParola.Location = new System.Drawing.Point(25, 105);
+            this.lblParola.Name = "lblParola";
+            this.lblParola.Size = new System.Drawing.Size(310, 22);
+            this.lblParola.TabIndex = 2;
+            this.lblParola.Text = "Parolă:";
             // 
             // txtParola
             // 
-            this.txtParola.Location = new System.Drawing.Point(72, 221);
-            this.txtParola.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtParola.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtParola.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtParola.Location = new System.Drawing.Point(25, 130);
             this.txtParola.Name = "txtParola";
-            this.txtParola.Size = new System.Drawing.Size(244, 20);
-            this.txtParola.TabIndex = 4;
-            this.txtParola.Text = "txtParola";
+            this.txtParola.PasswordChar = '*';
+            this.txtParola.Size = new System.Drawing.Size(280, 32);
+            this.txtParola.TabIndex = 3;
             // 
-            // button1
+            // btnShowPass
             // 
-            this.button1.Location = new System.Drawing.Point(152, 277);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 40);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Autentificare";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnShowPass.BackColor = System.Drawing.Color.White;
+            this.btnShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowPass.FlatAppearance.BorderSize = 0;
+            this.btnShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPass.Location = new System.Drawing.Point(308, 130);
+            this.btnShowPass.Name = "btnShowPass";
+            this.btnShowPass.Size = new System.Drawing.Size(30, 30);
+            this.btnShowPass.TabIndex = 4;
+            this.btnShowPass.Text = "👁";
+            this.btnShowPass.UseVisualStyleBackColor = false;
+            this.btnShowPass.Click += new System.EventHandler(this.btnShowPass_Click);
             // 
-            // button2
+            // btnLogin
             // 
-            this.button2.Location = new System.Drawing.Point(132, 321);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 34);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Nu ai cont? Inregistreaza-te";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnMergelaInregistrare_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(95)))), ((int)(((byte)(165)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(30, 418);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(360, 45);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Autentificare";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // label4
+            // btnMergelaInregistrare
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(147, 19);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 26);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Bun venit!";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(89, 58);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(227, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Autentifică-te pentu a continua";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.btnMergelaInregistrare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(240)))));
+            this.btnMergelaInregistrare.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMergelaInregistrare.FlatAppearance.BorderSize = 0;
+            this.btnMergelaInregistrare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMergelaInregistrare.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMergelaInregistrare.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(95)))), ((int)(((byte)(165)))));
+            this.btnMergelaInregistrare.Location = new System.Drawing.Point(30, 473);
+            this.btnMergelaInregistrare.Name = "btnMergelaInregistrare";
+            this.btnMergelaInregistrare.Size = new System.Drawing.Size(360, 35);
+            this.btnMergelaInregistrare.TabIndex = 3;
+            this.btnMergelaInregistrare.Text = "Nu ai cont? Înregistrează-te";
+            this.btnMergelaInregistrare.UseVisualStyleBackColor = false;
+            this.btnMergelaInregistrare.Click += new System.EventHandler(this.btnMergelaInregistrare_Click);
             // 
             // Autentificare
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 366);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtParola);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(234)))), ((int)(((byte)(240)))));
+            this.ClientSize = new System.Drawing.Size(420, 520);
+            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.pnlForm);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnMergelaInregistrare);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Autentificare";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autentificare";
-            this.Load += new System.EventHandler(this.Autentificare_Load);
+            this.pnlTop.ResumeLayout(false);
+            this.pnlForm.ResumeLayout(false);
+            this.pnlForm.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel pnlTop;
+        private System.Windows.Forms.Label lblTitlu;
+        private System.Windows.Forms.Label lblSubtitlu;
+        private System.Windows.Forms.Panel pnlForm;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblParola;
         private System.Windows.Forms.TextBox txtParola;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnShowPass;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnMergelaInregistrare;
     }
 }
