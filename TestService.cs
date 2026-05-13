@@ -12,7 +12,7 @@ namespace teste_auto
             using (var con = DatabaseHelper.GetConnection())
             {
                 con.Open();
-                string query = "SELECT * FROM intrebari ORDER BY RAND() LIMIT 26";
+                string query = "SELECT * FROM intrebari ORDER BY RAND() LIMIT 24";
                 var cmd = new MySqlCommand(query, con);
                 var reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -21,7 +21,7 @@ namespace teste_auto
                     {
                         Id = reader.GetInt32("id"),
                         TextIntrebare = reader.GetString("text_intrebare"),
-                        Categorie = reader.GetString("categorie")
+                        Categorie = reader.GetInt32("id_categorie").ToString()
                     });
                 }
                 reader.Close();
@@ -83,7 +83,8 @@ namespace teste_auto
                         Scor = reader.GetInt32("scor"),
                         TimpSecunde = reader.GetInt32("timp_secunde"),
                         Promovat = reader.GetBoolean("promovat"),
-                        DataTest = reader.GetDateTime("data_test")
+                        DataTest = reader.GetDateTime("data_test"),
+                        TipTest = reader.GetString("tip_test")
                     });
                 }
             }

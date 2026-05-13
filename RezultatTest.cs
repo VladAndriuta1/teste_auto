@@ -9,5 +9,7 @@ namespace teste_auto
         public int TimpSecunde { get; set; }
         public bool Promovat { get; set; }
         public DateTime DataTest { get; set; }
+        public string TipTest { get; set; }
     }
+
 }

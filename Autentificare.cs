@@ -19,7 +19,15 @@ namespace teste_auto
 
             if (email == "" || parola == "")
             {
-                MessageBox.Show("Completați toate câmpurile!");
+                MessageBox.Show("Completați toate câmpurile!", "Eroare",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!email.Contains("@") || !email.Contains("."))
+            {
+                MessageBox.Show("Introduceți o adresă de email validă!", "Eroare",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -27,35 +35,36 @@ namespace teste_auto
 
             if (user != null)
             {
-                new PaginaPrincipala(user).Show();
+                if (user.Rol == "admin")
+                {
+                    new AdminForm(user).Show();
+                }
+                else
+                {
+                    new PaginaPrincipala(user).Show();
+                }
                 this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Email sau parolă incorecte!");
             }
         }
 
         private void btnMergelaInregistrare_Click(object sender, EventArgs e)
         {
-            Inregistrare register = new Inregistrare();
-            register.Show();
+            new Inregistrare().Show();
             this.Hide();
         }
 
-        private void Autentificare_Load(object sender, EventArgs e)
+        private void btnShowPass_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            if (txtParola.PasswordChar == '*')
+            {
+                txtParola.PasswordChar = '\0';
+                btnShowPass.Text = "🙈";
+            }
+            else
+            {
+                txtParola.PasswordChar = '*';
+                btnShowPass.Text = "👁";
+            }
         }
     }
 }
