@@ -176,7 +176,9 @@
             this.pnlMain.Controls.Add(this.dgvUtilizatori);
             this.pnlMain.Controls.Add(this.lblRezultate);
             this.pnlMain.Controls.Add(this.dgvRezultate);
+            this.pnlMain.Controls.Add(this.btnAdaugaIntrebare);
             this.pnlMain.Controls.Add(this.btnExport);
+            this.pnlMain.Controls.Add(this.btnGestionareUtil);
 
             // Carduri statistici
             int cardW = 195, cardH = 80, cardY = 15;
@@ -311,6 +313,17 @@
             this.dgvRezultate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 
             // Butoane actiuni
+            this.btnAdaugaIntrebare.Text = "+ Adaugă întrebare";
+            this.btnAdaugaIntrebare.Font = new System.Drawing.Font("Segoe UI", 10, System.Drawing.FontStyle.Bold);
+            this.btnAdaugaIntrebare.BackColor = System.Drawing.Color.FromArgb(24, 95, 165);
+            this.btnAdaugaIntrebare.ForeColor = System.Drawing.Color.White;
+            this.btnAdaugaIntrebare.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdaugaIntrebare.FlatAppearance.BorderSize = 0;
+            this.btnAdaugaIntrebare.Size = new System.Drawing.Size(260, 45);
+            this.btnAdaugaIntrebare.Location = new System.Drawing.Point(15, 520);
+            this.btnAdaugaIntrebare.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdaugaIntrebare.Click += new System.EventHandler(this.btnAdaugaIntrebare_Click);
+
             this.btnExport.Text = "Export rezultate";
             this.btnExport.Font = new System.Drawing.Font("Segoe UI", 10, System.Drawing.FontStyle.Bold);
             this.btnExport.BackColor = System.Drawing.Color.FromArgb(24, 95, 165);
@@ -321,6 +334,17 @@
             this.btnExport.Location = new System.Drawing.Point(15, 520);
             this.btnExport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+
+            this.btnGestionareUtil.Text = "Gestionare utilizatori";
+            this.btnGestionareUtil.Font = new System.Drawing.Font("Segoe UI", 10, System.Drawing.FontStyle.Bold);
+            this.btnGestionareUtil.BackColor = System.Drawing.Color.White;
+            this.btnGestionareUtil.ForeColor = System.Drawing.Color.FromArgb(24, 95, 165);
+            this.btnGestionareUtil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionareUtil.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(24, 95, 165);
+            this.btnGestionareUtil.Size = new System.Drawing.Size(260, 45);
+            this.btnGestionareUtil.Location = new System.Drawing.Point(610, 520);
+            this.btnGestionareUtil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGestionareUtil.Click += new System.EventHandler(this.btnGestionareUtil_Click);
 
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlSidebar);

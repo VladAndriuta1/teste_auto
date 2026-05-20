@@ -44,20 +44,20 @@ namespace teste_auto
                 {
                     con.Open();
 
-
+                    
                     var cmd1 = new MySqlCommand("SELECT COUNT(*) FROM utilizatori WHERE rol='candidat'", con);
                     lblStat1Num.Text = cmd1.ExecuteScalar().ToString();
 
-
+                    
                     var cmd2 = new MySqlCommand("SELECT COUNT(*) FROM teste", con);
                     lblStat2Num.Text = cmd2.ExecuteScalar().ToString();
 
-
+                   
                     var cmd3 = new MySqlCommand("SELECT ROUND(SUM(promovat)*100/COUNT(*),0) FROM teste", con);
                     var rata = cmd3.ExecuteScalar();
                     lblStat3Num.Text = (rata == DBNull.Value ? "0" : rata.ToString()) + "%";
 
-
+                    
                     var cmd4 = new MySqlCommand("SELECT COUNT(*) FROM intrebari", con);
                     lblStat4Num.Text = cmd4.ExecuteScalar().ToString();
                 }
@@ -148,6 +148,12 @@ namespace teste_auto
             new RezultateForm().ShowDialog();
         }
 
+        private void btnAdaugaIntrebare_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Modulul de adăugare întrebări — în dezvoltare!",
+                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void btnExport_Click(object sender, EventArgs e)
         {
             try
@@ -183,6 +189,12 @@ namespace teste_auto
             }
         }
 
+        private void btnGestionareUtil_Click(object sender, EventArgs e)
+        {
+            IncarcaUtilizatoriRecenti();
+            MessageBox.Show("Utilizatorii au fost actualizați!",
+                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
